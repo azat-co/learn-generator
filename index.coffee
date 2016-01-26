@@ -1,3 +1,4 @@
+#!/usr/local/bin/coffee
 cp = require 'child_process'
 fs = require 'fs-extra'
 exec = require 'exec'
@@ -6,11 +7,9 @@ repo = process.argv[2]
 lessonName = process.argv[3]
 unitName = process.argv[4] or 'Node Modules'
 
-pwd = cp.execSync 'pwd', encoding: 'utf8'
-pwd = pwd.replace /\n/g, '' # use __dirname?
-
+sourceFolder = __dirname
 repoFolder = path.basename(repo, '.git')
-targetFolder = path.join pwd, '..', repoFolder
+targetFolder = path.join process.cwd(), repoFolder
 
 # exec "git clone #{repo}"
 if repo.indexOf('-lab')>-1
@@ -22,7 +21,7 @@ else
 #   exec "git checkout -b wip-master"
   templateFolder = 'node-readme'
 
-fs.copySync "#{pwd}/#{templateFolder}", "#{targetFolder}"
+fs.copySync "#{sourceFolder}/#{templateFolder}", "#{targetFolder}"
 dotLearn = fs.readFileSync "#{targetFolder}/.learn", encoding: 'utf8'
 dotLearn = dotLearn.replace /lesson-name/g, lessonName
 dotLearn = dotLearn.replace /unit-name/g, unitName
@@ -53,4 +52,4 @@ if repo.indexOf('-lab') > -1
 # // edit package.json with new repo url
 # // edit readme with name
 
-console.log repo, path.basename(repo, '.git'), pwd, process.cwd()
+console.log repo, path.basename(repo, '.git'), sourceFolder, targetFolder

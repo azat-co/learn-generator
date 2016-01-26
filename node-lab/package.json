@@ -1,0 +1,22 @@
+{
+  "name": "node-install",
+  "version": "1.0.0",
+  "description": "Installing Node and npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learn-co-curriculum/node-install.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/learn-co-curriculum/node-install/issues"
+  },
+  "homepage": "https://github.com/learn-co-curriculum/node-install#readme",
+  "devDependencies": {
+    "tape": "^4.3.0"
+  }
+}

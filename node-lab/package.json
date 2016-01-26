@@ -1,5 +1,5 @@
 {
-  "name": "node-install",
+  "name": "repo-folder",
   "version": "1.0.0",
   "description": "Installing Node and npm",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/learn-co-curriculum/node-install.git"
+    "url": "repo-name"
   },
-  "author": "",
+  "author": "Azat Mardan",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/learn-co-curriculum/node-install/issues"
+    "url": "repo-name/issues"
   },
-  "homepage": "https://github.com/learn-co-curriculum/node-install#readme",
+  "homepage": "repo-name#readme",
   "devDependencies": {
-    "tape": "^4.3.0"
+    "tape": "4.3.0"
   }
 }

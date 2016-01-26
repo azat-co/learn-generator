@@ -9,6 +9,6 @@ track:
 topc:
   - node
 unit:
-  - Node Basics
+  - unit-name
 lesson:
-  - Quick Overview and Introduction to Node.js
+  - lesson-name

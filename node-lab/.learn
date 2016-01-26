@@ -9,6 +9,6 @@ track:
 topc:
   - node
 unit:
-  - Node Basics
+  - unit-name
 lesson:
-  - Installing Node and npm
+  - lesson-name

@@ -1,4 +1,4 @@
-# Topic
+# lesson-name
 
 ## Overview
 
@@ -6,9 +6,9 @@ This lesson will cover the ...
 
 ## Objectives
 
-1. 
-1. 
-1. 
+1.
+1.
+1.
 
 ## Objective 1
 
@@ -22,4 +22,4 @@ This lesson will cover the ...
 
 ---
 
-<a href='https://learn.co/lessons/node-overview' data-visibility='hidden'>View this lesson on Learn.co</a>
+<a href='https://learn.co/lessons/repo-folder' data-visibility='hidden'>View this lesson on Learn.co</a>

@@ -43,13 +43,4 @@ if repo.indexOf('-lab') > -1
 
 # lesson-name, repo-folder, unit-name
 
-# $ git clone git@github.com:learn-co-curriculum/node-debugger-lab.git
-# $ gco -b solution
-# $ ggpush
-# $ gco -b wip-solution
-# // copy files
-# // edit learn with the new name
-# // edit package.json with new repo url
-# // edit readme with name
-
 console.log repo, path.basename(repo, '.git'), sourceFolder, targetFolder

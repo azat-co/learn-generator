@@ -19,7 +19,7 @@ $ learn-generator LESSON_REPO [LESSON_NAME] [UNIT_NAME]
 For example
 
 ```
-$ learn-generator 123-lab lesson123 unit2
+$ learn-generator git@github.com:learn-co-curriculum/node-modules-require.git node-modules-require "Importing, and Exporting Modules in Node" "Node Modules"
 ```
 
 If repository name has "-lab", the lab template will be used.

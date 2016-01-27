@@ -11,14 +11,14 @@ sourceFolder = __dirname
 repoFolder = path.basename(repo, '.git')
 targetFolder = path.join process.cwd(), repoFolder
 
-# exec "git clone #{repo}"
+cp.execSync "git clone #{repo}", cwd: process.cwd()
 if repo.indexOf('-lab')>-1
-#   exec "git checkout -b solution"
-#   exec "git push origin solution"
-#   exec "git checkout -b wip-solution"
+  cp.execSync "git checkout -b solution", cwd: targetFolder
+  cp.execSync "git push origin solution", cwd: targetFolder
+  cp.execSync "git checkout -b wip-solution", cwd: targetFolder
   templateFolder = 'node-lab'
 else
-#   exec "git checkout -b wip-master"
+  cp.execSync "git checkout -b wip-master", cwd: targetFolder
   templateFolder = 'node-readme'
 
 fs.copySync "#{sourceFolder}/#{templateFolder}", "#{targetFolder}"

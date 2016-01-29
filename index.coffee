@@ -3,9 +3,9 @@ cp = require 'child_process'
 fs = require 'fs-extra'
 exec = require 'exec'
 path = require 'path'
-repo = process.argv[2]
+unitName = process.argv[2]
 lessonName = process.argv[3]
-unitName = process.argv[4] or 'Node Modules'
+repo = process.argv[4]
 
 sourceFolder = __dirname
 repoFolder = path.basename(repo, '.git')

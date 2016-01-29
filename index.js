@@ -10,11 +10,11 @@
 
   path = require('path');
 
-  repo = process.argv[2];
+  unitName = process.argv[2];
 
   lessonName = process.argv[3];
 
-  unitName = process.argv[4] || 'Node Modules';
+  repo = process.argv[4];
 
   sourceFolder = __dirname;
 
@@ -22,9 +22,25 @@
 
   targetFolder = path.join(process.cwd(), repoFolder);
 
+  cp.execSync("git clone " + repo, {
+    cwd: process.cwd()
+  });
+
   if (repo.indexOf('-lab') > -1) {
+    cp.execSync("git checkout -b solution", {
+      cwd: targetFolder
+    });
+    cp.execSync("git push origin solution", {
+      cwd: targetFolder
+    });
+    cp.execSync("git checkout -b wip-solution", {
+      cwd: targetFolder
+    });
     templateFolder = 'node-lab';
   } else {
+    cp.execSync("git checkout -b wip-master", {
+      cwd: targetFolder
+    });
     templateFolder = 'node-readme';
   }
 

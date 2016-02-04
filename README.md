@@ -9,13 +9,14 @@ $ git clone URL
 $ npm install
 $ npm i -g coffee-script
 $ npm link
+```
 
 ## Usage
 
 Use double quotes for unit name and lesson name. All arguments are mandatory.
 
 ```
-$ learn-generator LESSON_NAME UNIT_NAME LESSON_REPO
+$ learn-generator UNIT_NAME LESSON_NAME LESSON_REPO
 ```
 
 For example

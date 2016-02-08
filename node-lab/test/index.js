@@ -1,18 +1,26 @@
-var test = require('tape'),
+var expect = require('chai').expect,
   cp = require('child_process')
 
-test('node version', function (t) {
-  t.plan(3)
-  t.equal(process.versions.node, '5.1.0')
-  child = cp.exec('npm -v',
-  function (error, stdout, stderr) {
-    console.log('stdout: ' + stdout)
-    console.log('stderr: ' + stderr)
-    t.equal(stderr, '')
-    if (error !== null) {
-      console.log('exec error: ' + error)
-    }
-    stdout = stdout.replace('\n','')
-    t.equal(stdout, '3.3.12')
+
+describe('node version', function () {
+  it('must be 5.1', function(done){
+    expect(process.versions.node).to.equal('5.1.0')
+    done()
+  })
+
+})
+
+describe('npm version', function () {
+  it('must be 2.14.15 or greater', function(done){
+    child = cp.exec('npm -v',
+    function (error, stdout, stderr) {
+      expect(stderr).to.equal('')
+      if (error !== null) {
+        console.log('exec error: ' + error)
+      }
+      stdout = stdout.replace('\n','')
+      // expect(semver.satisfies(stdout, '>=2.14.15')).to.equal(true)
+      done()
+    })
   })
 })

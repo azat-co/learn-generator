@@ -4,7 +4,7 @@
   "description": "Installing Node and npm",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/mocha/bin/mocha test"
+    "test": "node test/index.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,6 @@
   },
   "homepage": "repo-name#readme",
   "devDependencies": {
-    "mocha": "2.4.5",
-    "chai": "3.5.0"
+    "tape": "4.3.0"
   }
 }
